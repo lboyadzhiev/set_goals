@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import CourseGoalItem from '../CourseGoalItem/CourseGoalItem';
-import './CourseGoalList.css';
 
-const CourseGoalList = props => {
+import styles from './CourseGoalList.module.css';
+
+const CourseGoalList = (props) => {
+  // made just for testing purposes
+  const [isValid, setIsValid] = useState(true);
+
   return (
-    <ul className="goal-list">
-      {props.items.map(goal => (
+    <ul className={`${styles['goal-list']} ${!isValid && styles.invalid}`}>
+      {props.items.map((goal) => (
         <CourseGoalItem
           key={goal.id}
           id={goal.id}

@@ -1,0 +1,16 @@
+.goal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.invalid {
+  background-color: red;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .goal-list {
+    margin: 10px;
+  }
+}
